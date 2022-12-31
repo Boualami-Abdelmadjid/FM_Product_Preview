@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  display: grid;
+  height: 100vh;
+  font-size: 14px;
+  margin: 0;
+}
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 35rem;
+  height: fit-content;
+  place-self: center;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: "Montserrat";
+}
+.card img {
+  height: 100%;
+  width: 100%;
+  max-height: 400px;
+  max-width: 500px;
+}
+
+.details {
+  padding: 2rem;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.category {
+  margin-block: 0 1rem;
+  opacity: 0.7;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.title {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  line-height: 1.7rem;
+}
+
+.description {
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.price {
+  font-family: "Fraunces", serif;
+  display: grid;
+  gap: 1.3rem;
+  grid-auto-flow: column;
+  height: fit-content;
+  margin-block: 1rem;
+  align-items: center;
+  grid-template-columns: max-content max-content;
+}
+.price * {
+  margin: 0;
+  width: fit-content;
+}
+.price .new {
+  color: hsl(158, 36%, 37%);
+  font-size: 2rem;
+  font-weight: 600;
+}
+.price .older {
+  font-weight: 500;
+  text-decoration: line-through;
+  opacity: 0.4;
+  font-size: 12px;
+}
+
+.cart {
+  background-color: hsl(158, 36%, 37%);
+  outline: none;
+  border-color: transparent;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  height: 2.7rem;
+  padding-block: 0.5rem;
+  grid-template-columns: 20px max-content;
+  color: hsl(0, 0%, 100%);
+  border-radius: 7px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  gap: 5px;
+  cursor: pointer;
+}
+.cart img {
+  height: 15px;
+  width: 15px;
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    display: grid;
+    grid-template-columns: 90vw;
+    grid-template-rows: 1fr 1fr;
+    width: 90vw;
+    margin-inline: 1rem;
+    position: relative;
+  }
+  .card > img {
+    min-height: 100px;
+  }
+}
